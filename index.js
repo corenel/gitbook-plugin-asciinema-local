@@ -1,17 +1,28 @@
 module.exports = {
-    blocks: {
-        asciinema: {
-            process: function(blk) {
-                var castId = blk.body;
-                var url = 'https://asciinema.org/a/';
+    book: {
+        assets: "./static",
+        js: ["asciinema-player.js"],
+        css: ["asciinema-player.css"]
+    },
 
+    blocks: {
+        asciinema_local: {
+            process: function(blk) {
                 if (this.generator != "website") {
-                    return '<img src="' + url + castId + '.png" alt="Asciinema screencast thumbnail" /><p><a href="' + url + castId + '">Screencast link</a></p>';
+                    throw new Error("Asciinema-Local does not yet support ebooks");
                 }
 
-                return '<div style="comments-section">'
-                +'<script type="text/javascript" src="' + url + castId + '.js" id="asciicast-' + castId + '" async></script>'
-                +'</div>';
+                const file = blk.body;
+                const kwargs = blk.kwargs;
+
+                const attrs = ['cols', 'rows', 'autoplay', 'preload', 'loop', 'start-at', 'speed',
+                                'poster', 'font-size', 'title', 'author', 'author-url', 'author-img-url']
+                    .map(name => (name in kwargs) ? `${name}="${kwargs[name]}"` : "");
+
+                return [`<asciinema-player src="${file}"`]
+                    .concat(attrs)
+                    .concat('></asciinema-player>')
+                    .join(" ");
             }
         }
     }

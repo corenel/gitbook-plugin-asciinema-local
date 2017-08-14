@@ -1,20 +1,19 @@
 {
-    "name": "gitbook-plugin-asciinema",
-    "description": "Asciinema screencast integration made easy in GitBook",
+    "name": "gitbook-plugin-asciinema-local",
+    "description": "Local Asciinema screencast integration made easy in GitBook",
     "main": "index.js",
     "version": "0.0.1",
     "engines": {
         "gitbook": ">1.x.x"
     },
-    "homepage": "https://github.com/matthew-james/gitbook-plugin-asciinema",
+    "homepage": "https://github.com/GregBowyer/gitbook-plugin-asciinema-local",
     "repository": {
         "type": "git",
-        "url": "https://github.com/matthew-james/gitbook-plugin-asciinema.git"
+        "url": "https://github.com/GregBowyer/gitbook-plugin-asciinema-local.git"
     },
     "license": "Apache 2",
     "bugs": {
-        "url": "https://github.com/matthew-james/gitbook-plugin-asciinema/issues"
+        "url": "https://github.com/GregBowyer/gitbook-plugin-asciinema-local/issues"
     },
-    "dependencies": {
-    }
+    "dependencies": {}
 }
