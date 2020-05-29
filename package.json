@@ -6,14 +6,14 @@
     "engines": {
         "gitbook": ">1.x.x"
     },
-    "homepage": "https://github.com/GregBowyer/gitbook-plugin-asciinema-local",
+    "homepage": "https://github.com/corenel/gitbook-plugin-asciinema-local",
     "repository": {
         "type": "git",
-        "url": "https://github.com/GregBowyer/gitbook-plugin-asciinema-local.git"
+        "url": "https://github.com/corenel/gitbook-plugin-asciinema-local.git"
     },
     "license": "Apache 2",
     "bugs": {
-        "url": "https://github.com/GregBowyer/gitbook-plugin-asciinema-local/issues"
+        "url": "https://github.com/corenel/gitbook-plugin-asciinema-local/issues"
     },
     "dependencies": {}
 }
